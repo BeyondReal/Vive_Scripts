@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 /// <summary>
@@ -39,8 +39,8 @@ public class FindController : MonoBehaviour {
         SteamVR_Utils.Event.Listen("gripClicked", OnGripClicked);
         SteamVR_Utils.Event.Listen("gripUnclicked", OnGripUnclicked);
         SteamVR_Utils.Event.Listen("padClicked", OnPadClicked);
-        SteamVR_Utils.Event.Listen("padUnlicked", OnPadUnclicked);
-        SteamVR_Utils.Event.Listen("menuClicked", OnMenulicked);
+        SteamVR_Utils.Event.Listen("padUnclicked", OnPadUnclicked);
+        SteamVR_Utils.Event.Listen("menuClicked", OnMenuClicked);
         SteamVR_Utils.Event.Listen("menuUnclicked", OnMenuUnclicked);
         SteamVR_Utils.Event.Listen("padTouched", OnPadTouched);
         SteamVR_Utils.Event.Listen("padUntouched", OnPadUntouched);
@@ -56,8 +56,8 @@ public class FindController : MonoBehaviour {
         SteamVR_Utils.Event.Remove("gripClicked", OnGripClicked);
         SteamVR_Utils.Event.Remove("gripUnclicked", OnGripUnclicked);
         SteamVR_Utils.Event.Remove("padClicked", OnPadClicked);
-        SteamVR_Utils.Event.Remove("padUnlicked", OnPadUnclicked);
-        SteamVR_Utils.Event.Remove("menuClicked", OnMenulicked);
+        SteamVR_Utils.Event.Remove("padUnclicked", OnPadUnclicked);
+        SteamVR_Utils.Event.Remove("menuClicked", OnMenuclicked);
         SteamVR_Utils.Event.Remove("menuUnclicked", OnMenuUnclicked);
         SteamVR_Utils.Event.Remove("padTouched", OnPadTouched);
         SteamVR_Utils.Event.Remove("padUntouched", OnPadUntouched);
@@ -134,11 +134,11 @@ public class FindController : MonoBehaviour {
         Debug.Log("Touchpad Y is  " + eventStruct.padY);
     }
 
-    private void OnMenulicked(params object[] args) {
+    private void OnMenuClicked(params object[] args) {
 
         ControllerEventArgs eventStruct = (ControllerEventArgs)args[0];
 
-        Debug.Log("OnMenulicked");
+        Debug.Log("OnMenuClicked");
         Debug.Log("Controller Index is " + eventStruct.controllerIndex);
         Debug.Log("The flags are " + eventStruct.flags);
         Debug.Log("Touchpad X is " + eventStruct.padX);
