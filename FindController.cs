@@ -39,7 +39,7 @@ public class FindController : MonoBehaviour {
         SteamVR_Utils.Event.Listen("gripClicked", OnGripClicked);
         SteamVR_Utils.Event.Listen("gripUnclicked", OnGripUnclicked);
         SteamVR_Utils.Event.Listen("padClicked", OnPadClicked);
-        SteamVR_Utils.Event.Listen("padUnlicked", OnPadUnclicked);
+        SteamVR_Utils.Event.Listen("padUnclicked", OnPadUnclicked);
         SteamVR_Utils.Event.Listen("menuClicked", OnMenulicked);
         SteamVR_Utils.Event.Listen("menuUnclicked", OnMenuUnclicked);
         SteamVR_Utils.Event.Listen("padTouched", OnPadTouched);
@@ -56,7 +56,7 @@ public class FindController : MonoBehaviour {
         SteamVR_Utils.Event.Remove("gripClicked", OnGripClicked);
         SteamVR_Utils.Event.Remove("gripUnclicked", OnGripUnclicked);
         SteamVR_Utils.Event.Remove("padClicked", OnPadClicked);
-        SteamVR_Utils.Event.Remove("padUnlicked", OnPadUnclicked);
+        SteamVR_Utils.Event.Remove("padUnclicked", OnPadUnclicked);
         SteamVR_Utils.Event.Remove("menuClicked", OnMenulicked);
         SteamVR_Utils.Event.Remove("menuUnclicked", OnMenuUnclicked);
         SteamVR_Utils.Event.Remove("padTouched", OnPadTouched);
